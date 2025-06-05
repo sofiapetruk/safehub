@@ -127,7 +127,7 @@ public class AbrigoController implements AbrigoApi {
     @Override
     public ResponseEntity<Void> delete(@PathVariable Long idAbrigo) throws IdNotFoundException {
         if (abrigoService.findById(idAbrigo).isPresent()) {
-            abrigoService.deleteAbrigoComDependencias(idAbrigo);
+            abrigoService.delete(idAbrigo);
             return ResponseEntity.noContent().build();
         }
         return ResponseEntity.notFound().build();

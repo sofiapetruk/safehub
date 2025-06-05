@@ -2,8 +2,7 @@ package br.com.fiap.safehub.service;
 
 import br.com.fiap.safehub.entity.CadastroAbrigo;
 import br.com.fiap.safehub.repository.CadastroAbrigoRepository;
-import br.com.fiap.safehub.repository.EstoqueRepository;
-import br.com.fiap.safehub.repository.UsuarioRepository;
+import br.com.fiap.safehub.repository.EstoqueAbrigoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.CachePut;
@@ -24,10 +23,10 @@ public class CadastroAbrigoService {
     private CadastroAbrigoRepository abrigoRepository;
 
     @Autowired
-    private EstoqueRepository estoqueRepository;
+    private EstoqueAbrigoRepository estoqueRepository;
 
     @Autowired
-    private UsuarioRepository usuarioRepository;
+    private CadastroAbrigoRepository usuarioRepository;
 
     @Cacheable(cacheNames = "abrigos", key = "#idAbrigo")
     public List<CadastroAbrigo> findAll() {
@@ -53,8 +52,8 @@ public class CadastroAbrigoService {
     @CacheEvict(cacheNames = "abrigos", key = "#idAbrigo")
     public void delete(Long idAbrigo) {
         try {
-            estoqueRepository.deleteByAbrigoId(idAbrigo);
-            usuarioRepository.deleteByAbrigoId(idAbrigo);
+            estoqueRepository.deleteByChaveAbrigo_IdCadastroAbrigo(idAbrigo);
+            usuarioRepository.deleteById(idAbrigo);
             abrigoRepository.deleteById(idAbrigo);
         } catch (DataIntegrityViolationException e) {
             throw new RuntimeException("Ainda existem dependências relacionadas a este abrigo. Verifique todas as tabelas filhas.", e);
