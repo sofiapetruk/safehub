@@ -1,54 +1,101 @@
-# SafeHub
+# 🚀 SafeHub 
 
-## Integrantes do Grupo
+## 👥 Integrantes do Grupo
 
-| Nome            |   RM   | Sala   |
-|:----------------|:------:|:-------|
-| Julia Monteiro  | 557023 | 2TDSPV |
-| Victor Henrique | 556206 | 2TDSPH |
-| Sofia Petruk    | 556585 | 2TDSPV |
+| Nome             | RM     | Sala   |
+|------------------|--------|--------|
+| Julia Monteiro   | 557023 | 2TDSPV |
+| Victor Henrique  | 556206 | 2TDSPH |
+| Sofia Petruk     | 556585 | 2TDSPV |
 
+---
 
-### Solução do projeto
+## 💡 Sobre o Projeto
 
-    O projeto propõe o desenvolvimento de uma plataforma inteligente para gestão de pátios da Mottu, integrando visão computacional, sensores IoT e QR Code.
-    Com câmeras 360° instaladas no local, o sistema identificará visualmente motos em tempo real, mesmo sem placa ou com chassi oculto. Cada moto terá um QR Code 
-    vinculado ao seu cadastro completo, incluindo imagem, modelo e status. A plataforma permitirá a localização rápida dos veículos, rastreabilidade de movimentações 
-    e histórico de manutenções, eliminando perdas internas e aumentando a eficiência operacional. A solução visa resolver um dos principais gargalos logísticos da empresa 
-    com precisão e escalabilidade
+**SafeHub** é uma plataforma inteligente para gestão dos pátios da Mottu, utilizando tecnologias modernas como **visão computacional**, **sensores IoT** e **QR Code** para identificar, rastrear e manter o controle de motos em tempo real.
 
-### Descrição do projeto
+### 🔍 Solução Proposta
 
-    Até o final do ano, o projeto contará com todas as funcionalidades propostas na solução. Por enquanto, foram criadas as classes básicas necessárias para dar início ao desenvolvimento.
-    Criamos a classe do usuário, que servirá para login e cadastro, mas também permitirá acompanhar o status da própria moto ou realizar a compra de uma nova.
-    Também desenvolvemos uma classe exclusiva para a moto, que será utilizada para identificá-la no pátio e registrar o que precisa ser feito nela.
+- 📸 **Visão computacional** com câmeras 360° para identificar motos, mesmo com chassi ou placa ocultos.
+- 📱 **QR Code exclusivo** para cada moto, com vínculo a dados como:
+  - Imagem
+  - Modelo
+  - Status
+  - Histórico de manutenção
+- 🗺️ Rastreamento em tempo real, histórico de movimentações e notificações automatizadas.
+- ⚙️ Escalabilidade e redução de perdas internas.
 
-## Como Rodar o Projeto
+---
 
-### Pré-requisitos
-    IntelliJ IDEA
-    JDK-17
-    Oracle 11
-### Clonar repositorio
+## 🛠️ Status de Desenvolvimento
 
-    git clone https://github.com/sofiapetruk/smartmottu.git](https://github.com/sofiapetruk/safehub.git)
+- ✅ Estrutura de backend com Spring Boot 3.
+- ✅ Classes principais:
+  - `Usuario`: cadastro, login, rastreamento da própria moto, opção de compra.
+  - `Moto`: registro, movimentação, status e manutenção.
+- 🔜 Em desenvolvimento:
+  - Reconhecimento de imagem.
+  - Integração com dispositivos físicos (IoT).
+  - Interface web com visualização dos pátios.
 
-### Abra o projeto no IntelliJ IDEA:
+---
 
-    Inicie o IntelliJ
+## 🧰 Tecnologias Utilizadas
 
-    Vá em File > Open... e selecione a pasta do projeto clonado
+- Java 17  
+- Spring Boot 3.5.0  
+- Spring Data JPA  
+- Spring Security + JWT (JJWT)  
+- Validação com Bean Validation  
+- Oracle JDBC (ojdbc11)  
+- Swagger/OpenAPI (springdoc)  
+- Lombok  
+- DevTools  
 
-    Aguarde a indexação e o carregamento do Maven
+---
 
-### Execute o projeto:
+## 🚀 Como Rodar o Projeto
 
-    Clique na seta verde ▶ no canto superior direito
+### ✅ Pré-requisitos
 
-    Ou use o atalho Shift + F10
+- [IntelliJ IDEA](https://www.jetbrains.com/idea/)
+- [JDK 17+](https://adoptium.net/)
+- Oracle Database 11g (ou superior)
+- Maven
 
-### Endponits do projeto
-| Método |Exemplo                       | Descrição                                                       |
-|--------|---------------------------|-------------------------------|-----------------------------------------------------------------|
-|SWAGGER | (http://localhost:8080/swagger-ui/index.html)| Todos os nossos endpoints dessa api|
+### 📥 Clonar o Repositório
 
+```bash
+git clone https://github.com/sofiapetruk/safehub.git
+```
+
+### 🧭 Abrir no IntelliJ IDEA
+
+1. Inicie o IntelliJ.
+2. Vá em **File > Open...** e selecione a pasta do projeto clonado.
+3. Aguarde o carregamento das dependências via Maven.
+
+### ▶️ Executar o Projeto
+
+- Clique na seta verde ▶ no canto superior da IDE.
+- Ou use o atalho `Shift + F10`.
+
+---
+
+## 🔗 Endpoints e Documentação
+
+### 🌐 Swagger UI
+
+Acesse a documentação interativa:
+
+[http://localhost:8080/swagger-ui/index.html](http://localhost:8080/swagger-ui/index.html)
+
+---
+
+## 🌍 Deploy (Produção)
+
+> ✅ **Adicione o link do deploy assim que estiver disponível:**
+
+```md
+🔗 [Acesse o SafeHub Online](https://seu-link-deploy.com)
+```
