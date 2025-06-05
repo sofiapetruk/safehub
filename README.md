@@ -1,5 +1,3 @@
-# Global Sollution
-
 # SafeHub
 
 ## Integrantes do Grupo
@@ -29,11 +27,11 @@
 
 ### Pré-requisitos
     IntelliJ IDEA
-    JDK-23
+    JDK-17
     Oracle 11
 ### Clonar repositorio
 
-    git clone https://github.com/sofiapetruk/smartmottu.git
+    git clone https://github.com/sofiapetruk/smartmottu.git](https://github.com/sofiapetruk/safehub.git)
 
 ### Abra o projeto no IntelliJ IDEA:
 
@@ -52,5 +50,5 @@
 ### Endponits do projeto
 | Método |Exemplo                       | Descrição                                                       |
 |--------|---------------------------|-------------------------------|-----------------------------------------------------------------|
-|SWAGGER | (http://localhost:8080/swagger-ui/index.html)| Verificar quais atributos temos que utilizar na nossa api|
+|SWAGGER | (http://localhost:8080/swagger-ui/index.html)| Todos os nossos endpoints dessa api|
 
