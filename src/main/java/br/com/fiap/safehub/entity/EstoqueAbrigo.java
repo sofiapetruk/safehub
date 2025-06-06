@@ -3,7 +3,6 @@ package br.com.fiap.safehub.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.time.LocalDate;
 
 @Getter
 @Setter
@@ -17,7 +16,8 @@ import java.time.LocalDate;
 public class EstoqueAbrigo {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "estoque")
+    @Column(name = "ID_ESTOQUE")
     private Long idEstoque;
 
     @Column(name = "alimento", length = 100)
