@@ -68,15 +68,9 @@ Criar uma ferramenta digital completa que otimize a gestão de abrigos emergenci
 
 ---
 
-### 📸 Demonstração
-
-> *(Adicione aqui imagens ou GIFs mostrando o sistema rodando)*
-
----
 
 ### 🚧 Build & Deploy
-
-- CI/CD: [🔗 Link do Builder ou Render]([[https://seu-link-auiq](https://safehub-gs.onrender.com)])
+- CI/CD: [🔗 Link do Builder ou Render](https://safehub-gs.onrender.com)
 - Documentação Swagger: (https://safehub-gs.onrender.com/swagger-ui/index.html)
 
 ---
